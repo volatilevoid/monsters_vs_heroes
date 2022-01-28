@@ -1,4 +1,4 @@
-# Naslov projekta
+# Monsters vs. Heroes
 
 ### Note
 Before starting CLI app, run: `composer dump-autoload`.\
