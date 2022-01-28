@@ -9,9 +9,11 @@ class BattleSimulation
     {
         $battleField = BattleField::instantiate();
 
-        $battleField->prepareForBattle(new Battle());
 
-        $hero = new Knight();
+        $battleField->addMonster(new Spider());
+
+        $battleField->addHero(new Knight());
+
 
     }
 }

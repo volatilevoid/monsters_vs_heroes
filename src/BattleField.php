@@ -2,10 +2,16 @@
 
 namespace App;
 
+use App\Interface\HeroInterface;
+use App\Interface\MonsterInterface;
+
 class BattleField
 {
     private static $instance = null;
-    private Battle $battle;
+
+    private MonsterInterface $monster;
+    private HeroInterface $hero;
+
 
     private function __construct()
     {
@@ -21,8 +27,14 @@ class BattleField
         return self::$instance;
     }
 
-    public function prepareForBattle(Battle $battle)
+    public function addMonster(MonsterInterface $monster)
     {
-        $this->battle = $battle;
+        $this->monster = $monster;
     }
+
+    public function addHero(HeroInterface $hero)
+    {
+        $this->hero = $hero;
+    }
+    
 }
